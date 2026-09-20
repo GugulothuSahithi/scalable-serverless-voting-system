@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Voting System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Online Voting System</h1>
+
+        <p class="subtitle">
+            Scalable Serverless Voting System
+        </p>
+
+
+        <!-- LOGIN / LOGOUT -->
+
+        <p id="authStatus">
+            Not logged in
+        </p>
+
+        <button id="loginButton" onclick="login()">
+            Login with Cognito
+        </button>
+
+        <button id="logoutButton"
+                onclick="logout()"
+                style="display: none;">
+            Logout
+        </button>
+
+
+        <!-- VOTING -->
+
+        <div class="card">
+
+            <label for="userId">
+                Voter ID
+            </label>
+
+            <input
+                type="text"
+                id="userId"
+                placeholder="Enter your voter ID"
+            >
+
+
+            <label for="candidate">
+                Select Candidate
+            </label>
+
+            <select id="candidate">
+
+                <option value="">
+                    -- Select Candidate --
+                </option>
+
+                <option value="C001">
+                    Candidate C001
+                </option>
+
+                <option value="C002">
+                    Candidate C002
+                </option>
+
+            </select>
+
+
+            <button onclick="castVote()">
+                Cast Vote
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <div class="card">
+
+            <h2>
+                Voting Results
+            </h2>
+
+            <button onclick="getResults()">
+                View Results
+            </button>
+
+            <div id="results"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
