@@ -9,7 +9,7 @@ const CLIENT_ID =
     "703fhkfev307envmdjehv0hob9";
 
 const REDIRECT_URI =
-    "http://127.0.0.1:8080/";
+    "https://gugulothusahithi.github.io/scalable-serverless-voting-system/";
 
 
 // ======================================================
